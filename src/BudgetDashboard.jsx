@@ -252,7 +252,7 @@ function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospital
     <div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 24 }}>
         <MetricCard label="Buget general" value={fmtLei(totalBuget) + ' lei'} sub="după scăderea transferurilor inter-bugete" color="#185FA5" />
-        <MetricCard label="Spitale (centralizator)" value={fmtLei(totalHospitale) + ' lei'} sub={`${hospitals.length} spitale`} color="#993556" />
+        <MetricCard label="Spitale (venituri proprii CNAS)" value={fmtLei(totalHospitale) + ' lei'} sub={`${hospitals.length} spitale · nu din bugetul local`} color="#993556" />
         <MetricCard label="Investiții" value={fmtLei(totalInvestitii) + ' lei'} sub={pct(totalInvestitii, totalBuget) + ' din total'} color="#639922" />
         <MetricCard label="Cheltuieli personal" value={fmtLei(totalPersonal) + ' lei'} sub={pct(totalPersonal, totalBuget) + ' din total'} color="#D85A30" />
       </div>
@@ -674,8 +674,12 @@ function SpitaleTab({ hospitals, total, sort, setSort }) {
 
   return (
     <div>
+      <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 10, padding: '12px 16px', marginBottom: 16, fontSize: 13, color: 'var(--c-muted)', lineHeight: 1.5 }}>
+        Bugetele de mai jos reprezintă <strong style={{ color: 'var(--c-text)' }}>veniturile proprii</strong> ale spitalelor (sursa F), provenite în principal din contractele cu <strong style={{ color: 'var(--c-text)' }}>CNAS</strong> (Casa Națională de Asigurări de Sănătate), nu din bugetul local al PMB. Primăria alocă separat <strong style={{ color: 'var(--c-text)' }}>0,72 mld lei</strong> din bugetul local către ASSMB (Administrația Spitalelor), care coordonează aceste unități.
+      </div>
+
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: 12, marginBottom: 20 }}>
-        <MetricCard label="Total spitale" value={fmtLei(total) + ' lei'} sub={`${hospitals.length} spitale`} color="#993556" />
+        <MetricCard label="Total spitale (venituri proprii)" value={fmtLei(total) + ' lei'} sub={`${hospitals.length} spitale · sursa F`} color="#993556" />
         <MetricCard label="Personal" value={fmtLei(totalPersonal) + ' lei'} sub={pct(totalPersonal, total)} color="#185FA5" />
         <MetricCard label="Bunuri & servicii" value={fmtLei(totalBunuri) + ' lei'} sub={pct(totalBunuri, total)} color="#639922" />
         <MetricCard label="Investiții" value={fmtLei(totalInvest) + ' lei'} sub={pct(totalInvest, total)} color="#D85A30" />
