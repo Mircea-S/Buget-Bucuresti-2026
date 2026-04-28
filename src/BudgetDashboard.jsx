@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell, Treemap, Legend,
+  PieChart, Pie, Cell, Treemap, Legend, LabelList,
 } from 'recharts';
 import budgetData from './data/budget-data.json';
 import {
@@ -271,6 +271,7 @@ function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospital
               {top10.map((inst, i) => (
                 <Cell key={i} fill={INSTITUTION_CATEGORIES[inst.category]?.color || '#666'} />
               ))}
+              <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 11, fill: 'var(--c-text)' }} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>
@@ -372,6 +373,7 @@ function InstitutiiTab({ institutions, totalBuget, view, setView, sort, setSort,
                 {institutions.map((inst, i) => (
                   <Cell key={i} fill={INSTITUTION_CATEGORIES[inst.category]?.color || '#666'} />
                 ))}
+                <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -487,6 +489,7 @@ function InstitutionDetail({ inst, onBack }) {
               <Tooltip content={<CustomTooltip />} />
               <Bar dataKey="total" name="Total" radius={[0, 4, 4, 0]}>
                 {cfData.map((c, i) => <Cell key={i} fill={CF_COLORS[c.cf] || '#666'} />)}
+                <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -504,6 +507,7 @@ function InstitutionDetail({ inst, onBack }) {
               <Tooltip content={<CustomTooltip />} />
               <Bar dataKey="total" name="Total" radius={[0, 4, 4, 0]}>
                 {ceData.map((c, i) => <Cell key={i} fill={CE_COLORS[c.ce] || '#666'} />)}
+                <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -552,6 +556,7 @@ function FunctiiTab({ data, total }) {
             <Bar dataKey="total" name="Total" radius={[0, 4, 4, 0]} cursor="pointer"
               onClick={(d) => setSelected(d.cf === selected ? null : d.cf)}>
               {chartData.map((c, i) => <Cell key={i} fill={selected && c.cf !== selected ? '#ccc' : (CF_COLORS[c.cf] || '#666')} />)}
+              <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
             </Bar>
           </BarChart>
         </ResponsiveContainer>
@@ -697,7 +702,9 @@ function SpitaleTab({ hospitals, total, sort, setSort }) {
             <Bar dataKey="personal" name="Personal" stackId="a" fill="#185FA5" />
             <Bar dataKey="bunuri" name="Bunuri" stackId="a" fill="#639922" />
             <Bar dataKey="investitii" name="Investiții" stackId="a" fill="#D85A30" />
-            <Bar dataKey="altele" name="Altele" stackId="a" fill="#9E9E9E" radius={[0, 4, 4, 0]} />
+            <Bar dataKey="altele" name="Altele" stackId="a" fill="#9E9E9E" radius={[0, 4, 4, 0]}>
+              <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
+            </Bar>
           </BarChart>
         </ResponsiveContainer>
       </div>
