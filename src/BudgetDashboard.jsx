@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
   PieChart, Pie, Cell, Treemap, Legend, LabelList,
@@ -63,10 +63,21 @@ const Badge = ({ label, color }) => (
   <span style={{ display: 'inline-block', background: color + '18', color, fontSize: 11, fontWeight: 600, padding: '2px 8px', borderRadius: 10 }}>{label}</span>
 );
 
+function useIsMobile(breakpoint = 640) {
+  const [mobile, setMobile] = useState(window.innerWidth < breakpoint);
+  useEffect(() => {
+    const handler = () => setMobile(window.innerWidth < breakpoint);
+    window.addEventListener('resize', handler);
+    return () => window.removeEventListener('resize', handler);
+  }, [breakpoint]);
+  return mobile;
+}
+
 // ── Main Component ───────────────────────────────────────────
 export default function BudgetDashboard() {
   const [activeTab, setActiveTab] = useState('overview');
   const [theme, setTheme] = useState(() => localStorage.getItem('pmb-theme') || 'light');
+  const isMobile = useIsMobile();
 
   // Tab-specific state
   const [instView, setInstView] = useState('bar');
@@ -209,7 +220,7 @@ export default function BudgetDashboard() {
           <OverviewTab
             totalBuget={totalBuget} totalInvestitii={totalInvestitii} totalPersonal={totalPersonal}
             totalHospitale={totalHospitale} institutions={instFiltered} hospitals={hospitals}
-            aggregatedCF={aggregatedCF} aggregatedSursa={aggregatedSursa}
+            aggregatedCF={aggregatedCF} aggregatedSursa={aggregatedSursa} isMobile={isMobile}
           />
         )}
         {activeTab === 'institutii' && (
@@ -220,14 +231,15 @@ export default function BudgetDashboard() {
             category={instCategory} setCategory={setInstCategory}
             search={instSearch} setSearch={setInstSearch}
             selectedInst={selectedInst} setSelectedInst={setSelectedInst}
+            isMobile={isMobile}
           />
         )}
-        {activeTab === 'functii' && <FunctiiTab data={aggregatedCF} total={totalBuget} />}
-        {activeTab === 'economic' && <EconomicTab data={aggregatedCE} total={totalBuget} />}
+        {activeTab === 'functii' && <FunctiiTab data={aggregatedCF} total={totalBuget} isMobile={isMobile} />}
+        {activeTab === 'economic' && <EconomicTab data={aggregatedCE} total={totalBuget} isMobile={isMobile} />}
         {activeTab === 'spitale' && (
-          <SpitaleTab hospitals={hospSorted} total={totalHospitale} sort={hospSort} setSort={setHospSort} />
+          <SpitaleTab hospitals={hospSorted} total={totalHospitale} sort={hospSort} setSort={setHospSort} isMobile={isMobile} />
         )}
-        {activeTab === 'surse' && <SurseTab data={aggregatedSursa} total={totalBuget} institutions={allEntities} />}
+        {activeTab === 'surse' && <SurseTab data={aggregatedSursa} total={totalBuget} institutions={allEntities} isMobile={isMobile} />}
 
         {/* Footer */}
         <footer style={{ marginTop: 40, paddingTop: 16, borderTop: '1px solid var(--border-color)', fontSize: 11, color: 'var(--c-muted)', textAlign: 'center' }}>
@@ -240,7 +252,7 @@ export default function BudgetDashboard() {
 }
 
 // ── OVERVIEW TAB ─────────────────────────────────────────────
-function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospitale, institutions, hospitals, aggregatedCF, aggregatedSursa }) {
+function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospitale, institutions, hospitals, aggregatedCF, aggregatedSursa, isMobile }) {
   const top10 = institutions.slice(0, 10);
   const cfPie = aggregatedCF.filter(c => c.total > 0).slice(0, 10);
 
@@ -257,17 +269,17 @@ function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospital
       <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20, marginBottom: 20 }}>
         <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 16px' }}>Top 10 instituții după buget</h3>
         <ResponsiveContainer width="100%" height={350}>
-          <BarChart data={top10} layout="vertical" margin={{ left: 10, right: 20 }}>
+          <BarChart data={top10} layout="vertical" margin={{ left: 10, right: isMobile ? 10 : 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-            <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: 11, fill: 'var(--c-muted)' }} />
-            <YAxis type="category" dataKey="name" width={220} tick={{ fontSize: 11, fill: 'var(--c-text)' }}
-              tickFormatter={n => n.length > 35 ? n.slice(0, 32) + '…' : n} />
+            <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: isMobile ? 9 : 11, fill: 'var(--c-muted)' }} tickCount={isMobile ? 3 : undefined} />
+            <YAxis type="category" dataKey="name" width={isMobile ? 120 : 220} tick={{ fontSize: isMobile ? 9 : 11, fill: 'var(--c-text)' }}
+              tickFormatter={n => { const max = isMobile ? 18 : 35; return n.length > max ? n.slice(0, max - 3) + '…' : n; }} />
             <Tooltip content={<CustomTooltip />} />
             <Bar dataKey="totalBuget" name="Buget" radius={[0, 4, 4, 0]}>
               {top10.map((inst, i) => (
                 <Cell key={i} fill={INSTITUTION_CATEGORIES[inst.category]?.color || '#666'} />
               ))}
-              <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 11, fill: 'var(--c-text)' }} />
+              {!isMobile && <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 11, fill: 'var(--c-text)' }} />}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
@@ -279,9 +291,9 @@ function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospital
           <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 16px' }}>Pe funcții (clasificare funcțională)</h3>
           <ResponsiveContainer width="100%" height={280}>
             <PieChart>
-              <Pie data={cfPie} dataKey="total" nameKey="cf" cx="50%" cy="50%" innerRadius={50} outerRadius={100}
-                label={({ cf, percent }) => `${CF_LABELS[cf]?.slice(0, 15) || cf} ${(percent * 100).toFixed(0)}%`}
-                labelLine={{ stroke: 'var(--c-muted)' }} style={{ fontSize: 10 }}>
+              <Pie data={cfPie} dataKey="total" nameKey="cf" cx="50%" cy="50%" innerRadius={isMobile ? 35 : 50} outerRadius={isMobile ? 80 : 100}
+                label={isMobile ? false : ({ cf, percent }) => `${CF_LABELS[cf]?.slice(0, 15) || cf} ${(percent * 100).toFixed(0)}%`}
+                labelLine={isMobile ? false : { stroke: 'var(--c-muted)' }} style={{ fontSize: 10 }}>
                 {cfPie.map((c, i) => <Cell key={i} fill={CF_COLORS[c.cf] || '#999'} />)}
               </Pie>
               <Tooltip formatter={(v) => fmtLei(v) + ' lei'} />
@@ -292,9 +304,9 @@ function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospital
           <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 16px' }}>Surse de finanțare</h3>
           <ResponsiveContainer width="100%" height={280}>
             <PieChart>
-              <Pie data={aggregatedSursa.filter(s => s.total > 0)} dataKey="total" nameKey="label" cx="50%" cy="50%" innerRadius={50} outerRadius={100}
-                label={({ label, percent }) => `${label?.slice(0, 15)} ${(percent * 100).toFixed(0)}%`}
-                labelLine={{ stroke: 'var(--c-muted)' }} style={{ fontSize: 10 }}>
+              <Pie data={aggregatedSursa.filter(s => s.total > 0)} dataKey="total" nameKey="label" cx="50%" cy="50%" innerRadius={isMobile ? 35 : 50} outerRadius={isMobile ? 80 : 100}
+                label={isMobile ? false : ({ label, percent }) => `${label?.slice(0, 15)} ${(percent * 100).toFixed(0)}%`}
+                labelLine={isMobile ? false : { stroke: 'var(--c-muted)' }} style={{ fontSize: 10 }}>
                 {aggregatedSursa.filter(s => s.total > 0).map((s, i) => <Cell key={i} fill={SURSA_COLORS[s.sursa] || '#999'} />)}
               </Pie>
               <Tooltip formatter={(v) => fmtLei(v) + ' lei'} />
@@ -307,11 +319,11 @@ function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospital
 }
 
 // ── INSTITUTIONS TAB ────────────────────────────────────────
-function InstitutiiTab({ institutions, totalBuget, view, setView, sort, setSort, category, setCategory, search, setSearch, selectedInst, setSelectedInst }) {
+function InstitutiiTab({ institutions, totalBuget, view, setView, sort, setSort, category, setCategory, search, setSearch, selectedInst, setSelectedInst, isMobile }) {
   if (selectedInst) {
     const inst = institutions.find(i => i.fileRef === selectedInst);
     if (!inst) { setSelectedInst(null); return null; }
-    return <InstitutionDetail inst={inst} onBack={() => setSelectedInst(null)} />;
+    return <InstitutionDetail inst={inst} onBack={() => setSelectedInst(null)} isMobile={isMobile} />;
   }
 
   const treemapData = institutions.filter(i => i.totalBuget > 0).map(i => ({
@@ -358,18 +370,18 @@ function InstitutiiTab({ institutions, totalBuget, view, setView, sort, setSort,
       {view === 'bar' && (
         <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20 }}>
           <ResponsiveContainer width="100%" height={Math.max(400, institutions.length * 28)}>
-            <BarChart data={institutions} layout="vertical" margin={{ left: 10, right: 20 }}>
+            <BarChart data={institutions} layout="vertical" margin={{ left: 10, right: isMobile ? 10 : 20 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-              <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: 11, fill: 'var(--c-muted)' }} />
-              <YAxis type="category" dataKey="name" width={240} tick={{ fontSize: 10, fill: 'var(--c-text)' }}
-                tickFormatter={n => n.length > 40 ? n.slice(0, 37) + '…' : n} />
+              <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: isMobile ? 9 : 11, fill: 'var(--c-muted)' }} tickCount={isMobile ? 3 : undefined} />
+              <YAxis type="category" dataKey="name" width={isMobile ? 120 : 240} tick={{ fontSize: isMobile ? 9 : 10, fill: 'var(--c-text)' }}
+                tickFormatter={n => { const max = isMobile ? 18 : 40; return n.length > max ? n.slice(0, max - 3) + '…' : n; }} />
               <Tooltip content={<CustomTooltip />} />
               <Bar dataKey="totalBuget" name="Buget" radius={[0, 4, 4, 0]} cursor="pointer"
                 onClick={(data) => setSelectedInst(data.fileRef)}>
                 {institutions.map((inst, i) => (
                   <Cell key={i} fill={INSTITUTION_CATEGORIES[inst.category]?.color || '#666'} />
                 ))}
-                <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
+                {!isMobile && <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -379,10 +391,11 @@ function InstitutiiTab({ institutions, totalBuget, view, setView, sort, setSort,
       {/* Treemap view */}
       {view === 'treemap' && (
         <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20 }}>
-          <ResponsiveContainer width="100%" height={500}>
+          <ResponsiveContainer width="100%" height={isMobile ? 350 : 500}>
             <Treemap data={treemapData} dataKey="size" nameKey="name" aspectRatio={4 / 3}
               content={({ x, y, width, height, name, fill }) => {
-                if (width < 40 || height < 20) return <rect x={x} y={y} width={width} height={height} fill={fill} stroke="var(--bg-surface)" strokeWidth={2} />;
+                const minW = isMobile ? 60 : 40;
+                if (width < minW || height < 20) return <rect x={x} y={y} width={width} height={height} fill={fill} stroke="var(--bg-surface)" strokeWidth={2} />;
                 return (
                   <g>
                     <rect x={x} y={y} width={width} height={height} fill={fill} stroke="var(--bg-surface)" strokeWidth={2} rx={4} />
@@ -445,7 +458,7 @@ function InstitutiiTab({ institutions, totalBuget, view, setView, sort, setSort,
 }
 
 // ── Institution Detail ───────────────────────────────────────
-function InstitutionDetail({ inst, onBack }) {
+function InstitutionDetail({ inst, onBack, isMobile }) {
   const ceAgg = {};
   for (const cf of inst.byCF) {
     for (const ce of cf.byCE) {
@@ -477,15 +490,15 @@ function InstitutionDetail({ inst, onBack }) {
         <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20 }}>
           <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 12px' }}>Pe funcții (CF)</h3>
           <ResponsiveContainer width="100%" height={Math.max(200, cfData.length * 32)}>
-            <BarChart data={cfData} layout="vertical" margin={{ left: 10, right: 20 }}>
+            <BarChart data={cfData} layout="vertical" margin={{ left: 10, right: isMobile ? 10 : 20 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-              <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: 11, fill: 'var(--c-muted)' }} />
-              <YAxis type="category" dataKey="label" width={180} tick={{ fontSize: 10, fill: 'var(--c-text)' }}
-                tickFormatter={n => n.length > 25 ? n.slice(0, 22) + '…' : n} />
+              <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: isMobile ? 9 : 11, fill: 'var(--c-muted)' }} tickCount={isMobile ? 3 : undefined} />
+              <YAxis type="category" dataKey="label" width={isMobile ? 100 : 180} tick={{ fontSize: isMobile ? 9 : 10, fill: 'var(--c-text)' }}
+                tickFormatter={n => { const max = isMobile ? 15 : 25; return n.length > max ? n.slice(0, max - 3) + '…' : n; }} />
               <Tooltip content={<CustomTooltip />} />
               <Bar dataKey="total" name="Total" radius={[0, 4, 4, 0]}>
                 {cfData.map((c, i) => <Cell key={i} fill={CF_COLORS[c.cf] || '#666'} />)}
-                <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
+                {!isMobile && <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -495,15 +508,15 @@ function InstitutionDetail({ inst, onBack }) {
         <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20 }}>
           <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 12px' }}>Pe tipuri economice (CE)</h3>
           <ResponsiveContainer width="100%" height={Math.max(200, ceData.length * 32)}>
-            <BarChart data={ceData} layout="vertical" margin={{ left: 10, right: 20 }}>
+            <BarChart data={ceData} layout="vertical" margin={{ left: 10, right: isMobile ? 10 : 20 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-              <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: 11, fill: 'var(--c-muted)' }} />
-              <YAxis type="category" dataKey="label" width={180} tick={{ fontSize: 10, fill: 'var(--c-text)' }}
-                tickFormatter={n => n.length > 25 ? n.slice(0, 22) + '…' : n} />
+              <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: isMobile ? 9 : 11, fill: 'var(--c-muted)' }} tickCount={isMobile ? 3 : undefined} />
+              <YAxis type="category" dataKey="label" width={isMobile ? 100 : 180} tick={{ fontSize: isMobile ? 9 : 10, fill: 'var(--c-text)' }}
+                tickFormatter={n => { const max = isMobile ? 15 : 25; return n.length > max ? n.slice(0, max - 3) + '…' : n; }} />
               <Tooltip content={<CustomTooltip />} />
               <Bar dataKey="total" name="Total" radius={[0, 4, 4, 0]}>
                 {ceData.map((c, i) => <Cell key={i} fill={CE_COLORS[c.ce] || '#666'} />)}
-                <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
+                {!isMobile && <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />}
               </Bar>
             </BarChart>
           </ResponsiveContainer>
@@ -530,7 +543,7 @@ function InstitutionDetail({ inst, onBack }) {
 }
 
 // ── FUNCTIONS TAB (CF) ──────────────────────────────────────
-function FunctiiTab({ data, total }) {
+function FunctiiTab({ data, total, isMobile }) {
   const [selected, setSelected] = useState(null);
   const chartData = data.filter(c => c.total > 0).map(c => ({
     ...c, label: CF_LABELS[c.cf] || `CF ${c.cf}`,
@@ -543,16 +556,16 @@ function FunctiiTab({ data, total }) {
       <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20, marginBottom: 16 }}>
         <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 16px' }}>Cheltuieli pe clasificare funcțională</h3>
         <ResponsiveContainer width="100%" height={Math.max(350, chartData.length * 28)}>
-          <BarChart data={chartData} layout="vertical" margin={{ left: 10, right: 20 }}>
+          <BarChart data={chartData} layout="vertical" margin={{ left: 10, right: isMobile ? 10 : 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-            <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: 11, fill: 'var(--c-muted)' }} />
-            <YAxis type="category" dataKey="label" width={220} tick={{ fontSize: 11, fill: 'var(--c-text)' }}
-              tickFormatter={n => n.length > 30 ? n.slice(0, 27) + '…' : n} />
+            <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: isMobile ? 9 : 11, fill: 'var(--c-muted)' }} tickCount={isMobile ? 3 : undefined} />
+            <YAxis type="category" dataKey="label" width={isMobile ? 120 : 220} tick={{ fontSize: isMobile ? 9 : 11, fill: 'var(--c-text)' }}
+              tickFormatter={n => { const max = isMobile ? 18 : 30; return n.length > max ? n.slice(0, max - 3) + '…' : n; }} />
             <Tooltip content={<CustomTooltip />} />
             <Bar dataKey="total" name="Total" radius={[0, 4, 4, 0]} cursor="pointer"
               onClick={(d) => setSelected(d.cf === selected ? null : d.cf)}>
               {chartData.map((c, i) => <Cell key={i} fill={selected && c.cf !== selected ? '#ccc' : (CF_COLORS[c.cf] || '#666')} />)}
-              <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
+              {!isMobile && <LabelList dataKey="total" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
@@ -582,7 +595,7 @@ function FunctiiTab({ data, total }) {
 }
 
 // ── ECONOMIC TAB (CE) ────────────────────────────────────────
-function EconomicTab({ data, total }) {
+function EconomicTab({ data, total, isMobile }) {
   const [selected, setSelected] = useState(null);
   const chartData = data.filter(c => c.total > 0).map(c => ({
     ...c, label: CE_LABELS[c.ce] || `CE ${c.ce}`,
@@ -598,9 +611,9 @@ function EconomicTab({ data, total }) {
           <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 16px' }}>Structura cheltuielilor</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
-              <Pie data={pieData} dataKey="total" nameKey="label" cx="50%" cy="50%" innerRadius={50} outerRadius={110}
-                label={({ label, percent }) => `${label?.slice(0, 18)} ${(percent * 100).toFixed(0)}%`}
-                labelLine={{ stroke: 'var(--c-muted)' }} style={{ fontSize: 10 }}
+              <Pie data={pieData} dataKey="total" nameKey="label" cx="50%" cy="50%" innerRadius={isMobile ? 35 : 50} outerRadius={isMobile ? 80 : 110}
+                label={isMobile ? false : ({ label, percent }) => `${label?.slice(0, 18)} ${(percent * 100).toFixed(0)}%`}
+                labelLine={isMobile ? false : { stroke: 'var(--c-muted)' }} style={{ fontSize: 10 }}
                 cursor="pointer" onClick={(d) => setSelected(d.ce === selected ? null : d.ce)}>
                 {pieData.map((c, i) => <Cell key={i} fill={CE_COLORS[c.ce] || '#666'} />)}
               </Pie>
@@ -652,7 +665,7 @@ function EconomicTab({ data, total }) {
 }
 
 // ── HOSPITALS TAB ────────────────────────────────────────────
-function SpitaleTab({ hospitals, total, sort, setSort }) {
+function SpitaleTab({ hospitals, total, sort, setSort, isMobile }) {
   // CE aggregation per hospital
   const hospWithCE = hospitals.map(h => {
     const ceAgg = {};
@@ -692,18 +705,18 @@ function SpitaleTab({ hospitals, total, sort, setSort }) {
       <div style={{ background: 'var(--bg-card)', border: '1px solid var(--border-color)', borderRadius: 12, padding: 20, marginBottom: 16 }}>
         <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 16px' }}>Comparație buget spitale</h3>
         <ResponsiveContainer width="100%" height={Math.max(400, hospitals.length * 30)}>
-          <BarChart data={hospWithCE} layout="vertical" margin={{ left: 10, right: 20 }}>
+          <BarChart data={hospWithCE} layout="vertical" margin={{ left: 10, right: isMobile ? 10 : 20 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="var(--border-color)" />
-            <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: 11, fill: 'var(--c-muted)' }} />
-            <YAxis type="category" dataKey="name" width={260} tick={{ fontSize: 10, fill: 'var(--c-text)' }}
-              tickFormatter={n => n.length > 40 ? n.slice(0, 37) + '…' : n} />
+            <XAxis type="number" tickFormatter={fmtLei} tick={{ fontSize: isMobile ? 9 : 11, fill: 'var(--c-muted)' }} tickCount={isMobile ? 3 : undefined} />
+            <YAxis type="category" dataKey="name" width={isMobile ? 120 : 260} tick={{ fontSize: isMobile ? 9 : 10, fill: 'var(--c-text)' }}
+              tickFormatter={n => { const max = isMobile ? 18 : 40; return n.length > max ? n.slice(0, max - 3) + '…' : n; }} />
             <Tooltip content={<CustomTooltip />} />
-            <Legend wrapperStyle={{ fontSize: 11 }} />
+            <Legend wrapperStyle={{ fontSize: isMobile ? 10 : 11 }} />
             <Bar dataKey="personal" name="Personal" stackId="a" fill="#185FA5" />
             <Bar dataKey="bunuri" name="Bunuri" stackId="a" fill="#639922" />
             <Bar dataKey="investitii" name="Investiții" stackId="a" fill="#D85A30" />
             <Bar dataKey="altele" name="Altele" stackId="a" fill="#9E9E9E" radius={[0, 4, 4, 0]}>
-              <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />
+              {!isMobile && <LabelList dataKey="totalBuget" position="right" formatter={fmtLei} style={{ fontSize: 10, fill: 'var(--c-text)' }} />}
             </Bar>
           </BarChart>
         </ResponsiveContainer>
@@ -739,7 +752,7 @@ function SpitaleTab({ hospitals, total, sort, setSort }) {
 }
 
 // ── SOURCES TAB ──────────────────────────────────────────────
-function SurseTab({ data, total, institutions }) {
+function SurseTab({ data, total, institutions, isMobile }) {
   const pieData = data.filter(s => s.total > 0);
 
   // Top institutions per sursa for the selected one
@@ -760,9 +773,9 @@ function SurseTab({ data, total, institutions }) {
           <h3 style={{ fontSize: 14, fontWeight: 600, margin: '0 0 16px' }}>Repartiție pe surse de finanțare</h3>
           <ResponsiveContainer width="100%" height={300}>
             <PieChart>
-              <Pie data={pieData} dataKey="total" nameKey="label" cx="50%" cy="50%" innerRadius={50} outerRadius={110}
-                label={({ label, percent }) => `${label?.slice(0, 18)} ${(percent * 100).toFixed(0)}%`}
-                labelLine={{ stroke: 'var(--c-muted)' }} style={{ fontSize: 10 }}
+              <Pie data={pieData} dataKey="total" nameKey="label" cx="50%" cy="50%" innerRadius={isMobile ? 35 : 50} outerRadius={isMobile ? 80 : 110}
+                label={isMobile ? false : ({ label, percent }) => `${label?.slice(0, 18)} ${(percent * 100).toFixed(0)}%`}
+                labelLine={isMobile ? false : { stroke: 'var(--c-muted)' }} style={{ fontSize: 10 }}
                 cursor="pointer" onClick={(d) => setSelected(d.sursa === selected ? null : d.sursa)}>
                 {pieData.map((s, i) => <Cell key={i} fill={SURSA_COLORS[s.sursa] || '#999'} />)}
               </Pie>
