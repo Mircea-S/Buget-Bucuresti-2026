@@ -80,6 +80,9 @@ function processXlsx(filePath) {
 
     if (isNaN(amount)) continue;
 
+    // Skip revenue rows (rows with blank CE are income, not expenditure)
+    if (!ce) continue;
+
     totalBuget += amount;
     bySursa[sursa] = (bySursa[sursa] || 0) + amount;
 
@@ -170,6 +173,15 @@ const hospitals = processDirectory(join(RAW_DIR, 'SPITALE_BUGETE'), {});
 // Mark all hospitals as sanatate category
 hospitals.forEach(h => { h.category = 'sanatate'; });
 
+// Compute totals
+// Exclude centralizator spitale (2.44.1.1) to avoid double-counting with individual hospitals
+const instWithoutCentr = institutions.filter(i => i.fileRef !== '2.44.1.1');
+const totalInst = instWithoutCentr.reduce((s, i) => s + i.totalBuget, 0);
+const totalHosp = hospitals.reduce((s, h) => s + h.totalBuget, 0);
+// Inter-budget transfers (from PDF Anexa 1.1: 1,802,141 mii lei = 1,802,141,000 lei)
+const transferuriInterBugete = 1802141000;
+const totalBugetGeneral = totalInst + totalHosp - transferuriInterBugete;
+
 // Write output
 const output = {
   meta: {
@@ -177,6 +189,8 @@ const output = {
     sourceUrl: "https://www.pmb.ro/buget/arhiva/get-anual-buget-list/2026/113",
     units: "lei",
     generated: new Date().toISOString().split('T')[0],
+    totalBugetGeneral: Math.round(totalBugetGeneral),
+    transferuriInterBugete,
   },
   institutions,
   hospitals,
@@ -185,9 +199,9 @@ const output = {
 writeFileSync(join(OUT_DIR, 'budget-data.json'), JSON.stringify(output, null, 2));
 
 // Summary
-const totalInst = institutions.reduce((s, i) => s + i.totalBuget, 0);
-const totalHosp = hospitals.reduce((s, h) => s + h.totalBuget, 0);
 console.log(`\n=== Summary ===`);
-console.log(`Institutions: ${institutions.length} (${(totalInst / 1e9).toFixed(1)} mld lei)`);
-console.log(`Hospitals: ${hospitals.length} (${(totalHosp / 1e9).toFixed(1)} mld lei)`);
+console.log(`Institutions: ${instWithoutCentr.length} (${(totalInst / 1e9).toFixed(2)} mld lei)`);
+console.log(`Hospitals: ${hospitals.length} (${(totalHosp / 1e9).toFixed(2)} mld lei)`);
+console.log(`Transferuri inter-bugete (se scad): ${(transferuriInterBugete / 1e9).toFixed(2)} mld lei`);
+console.log(`Total buget general: ${(totalBugetGeneral / 1e9).toFixed(2)} mld lei`);
 console.log(`Output: ${join(OUT_DIR, 'budget-data.json')}`);

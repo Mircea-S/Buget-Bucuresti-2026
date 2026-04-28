@@ -98,10 +98,12 @@ export default function BudgetDashboard() {
     return list;
   }, [institutions, instCategory, instSearch, instSort]);
 
-  const totalBuget = useMemo(() =>
+  const totalCheltuieli = useMemo(() =>
     institutions.filter(i => i.fileRef !== '2.44.1.1').reduce((s, i) => s + i.totalBuget, 0),
     [institutions]
   );
+
+  const totalBuget = budgetData.meta.totalBugetGeneral || totalCheltuieli;
 
   const totalInvestitii = useMemo(() => {
     return institutions.filter(i => i.fileRef !== '2.44.1.1').reduce((s, inst) => {
@@ -249,7 +251,7 @@ function OverviewTab({ totalBuget, totalInvestitii, totalPersonal, totalHospital
   return (
     <div>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: 12, marginBottom: 24 }}>
-        <MetricCard label="Buget total" value={fmtLei(totalBuget) + ' lei'} sub={fmtLeiLong(totalBuget)} color="#185FA5" />
+        <MetricCard label="Buget general" value={fmtLei(totalBuget) + ' lei'} sub="după scăderea transferurilor inter-bugete" color="#185FA5" />
         <MetricCard label="Spitale (centralizator)" value={fmtLei(totalHospitale) + ' lei'} sub={`${hospitals.length} spitale`} color="#993556" />
         <MetricCard label="Investiții" value={fmtLei(totalInvestitii) + ' lei'} sub={pct(totalInvestitii, totalBuget) + ' din total'} color="#639922" />
         <MetricCard label="Cheltuieli personal" value={fmtLei(totalPersonal) + ' lei'} sub={pct(totalPersonal, totalBuget) + ' din total'} color="#D85A30" />
