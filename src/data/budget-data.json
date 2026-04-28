@@ -1,0 +1,4461 @@
+{
+  "meta": {
+    "source": "Proiectul de Buget al Municipiului București pe anul 2026",
+    "sourceUrl": "https://www.pmb.ro/buget/arhiva/get-anual-buget-list/2026/113",
+    "units": "lei",
+    "generated": "2026-04-28"
+  },
+  "institutions": [
+    {
+      "id": "2.47",
+      "fileRef": "2.47",
+      "name": "Municipiul Bucuresti",
+      "codFiscal": "4267117",
+      "category": "administratie",
+      "totalBuget": 18206327840,
+      "bySursa": {
+        "A": 16210967300,
+        "B": 1418340000,
+        "C": 575880540,
+        "D": 1140000
+      },
+      "byCF": [
+        {
+          "cf": "04",
+          "total": 6279620110,
+          "bySursa": {
+            "A": 6279620110
+          },
+          "byCE": []
+        },
+        {
+          "cf": "84",
+          "total": 3161058000,
+          "bySursa": {
+            "A": 2499156000,
+            "B": 629170000,
+            "C": 32732000
+          },
+          "byCE": [
+            {
+              "ce": "40",
+              "total": 1379906000
+            },
+            {
+              "ce": "56",
+              "total": 1041407000
+            },
+            {
+              "ce": "71",
+              "total": 287681000
+            },
+            {
+              "ce": "51",
+              "total": 234322000
+            },
+            {
+              "ce": "81",
+              "total": 98197000
+            },
+            {
+              "ce": "60",
+              "total": 81059000
+            },
+            {
+              "ce": "55",
+              "total": 36678000
+            },
+            {
+              "ce": "20",
+              "total": 1808000
+            }
+          ]
+        },
+        {
+          "cf": "81",
+          "total": 2618157200,
+          "bySursa": {
+            "A": 2331739200,
+            "B": 80000000,
+            "C": 206418000
+          },
+          "byCE": [
+            {
+              "ce": "40",
+              "total": 1391288200
+            },
+            {
+              "ce": "56",
+              "total": 719862000
+            },
+            {
+              "ce": "71",
+              "total": 332701000
+            },
+            {
+              "ce": "81",
+              "total": 170875000
+            },
+            {
+              "ce": "55",
+              "total": 3431000
+            }
+          ]
+        },
+        {
+          "cf": "42",
+          "total": 1070927420,
+          "bySursa": {
+            "A": 1070927420
+          },
+          "byCE": []
+        },
+        {
+          "cf": "41",
+          "total": 997110270,
+          "bySursa": {
+            "B": 709170000,
+            "C": 287940270
+          },
+          "byCE": []
+        },
+        {
+          "cf": "67",
+          "total": 604746000,
+          "bySursa": {
+            "A": 604746000
+          },
+          "byCE": [
+            {
+              "ce": "51",
+              "total": 592090000
+            },
+            {
+              "ce": "71",
+              "total": 10499000
+            },
+            {
+              "ce": "20",
+              "total": 1250000
+            },
+            {
+              "ce": "81",
+              "total": 907000
+            }
+          ]
+        },
+        {
+          "cf": "45",
+          "total": 541077620,
+          "bySursa": {
+            "A": 541077620
+          },
+          "byCE": []
+        },
+        {
+          "cf": "51",
+          "total": 530088000,
+          "bySursa": {
+            "A": 522845000,
+            "C": 7243000
+          },
+          "byCE": [
+            {
+              "ce": "59",
+              "total": 256482000
+            },
+            {
+              "ce": "10",
+              "total": 156005000
+            },
+            {
+              "ce": "20",
+              "total": 93395000
+            },
+            {
+              "ce": "71",
+              "total": 20398000
+            },
+            {
+              "ce": "81",
+              "total": 3172000
+            },
+            {
+              "ce": "55",
+              "total": 626000
+            },
+            {
+              "ce": "57",
+              "total": 10000
+            }
+          ]
+        },
+        {
+          "cf": "70",
+          "total": 529839000,
+          "bySursa": {
+            "A": 529839000
+          },
+          "byCE": [
+            {
+              "ce": "71",
+              "total": 205008000
+            },
+            {
+              "ce": "20",
+              "total": 181336000
+            },
+            {
+              "ce": "51",
+              "total": 137120000
+            },
+            {
+              "ce": "60",
+              "total": 5859000
+            },
+            {
+              "ce": "81",
+              "total": 516000
+            }
+          ]
+        },
+        {
+          "cf": "68",
+          "total": 467690000,
+          "bySursa": {
+            "A": 467690000
+          },
+          "byCE": [
+            {
+              "ce": "51",
+              "total": 467690000
+            }
+          ]
+        },
+        {
+          "cf": "55",
+          "total": 346349000,
+          "bySursa": {
+            "A": 346349000
+          },
+          "byCE": [
+            {
+              "ce": "30",
+              "total": 337294000
+            },
+            {
+              "ce": "20",
+              "total": 9055000
+            }
+          ]
+        },
+        {
+          "cf": "74",
+          "total": 241609220,
+          "bySursa": {
+            "A": 200061950,
+            "C": 41547270
+          },
+          "byCE": [
+            {
+              "ce": "56",
+              "total": 85344220
+            },
+            {
+              "ce": "71",
+              "total": 57591000
+            },
+            {
+              "ce": "20",
+              "total": 49510000
+            },
+            {
+              "ce": "51",
+              "total": 32737000
+            },
+            {
+              "ce": "81",
+              "total": 8927000
+            },
+            {
+              "ce": "55",
+              "total": 7500000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 159824000,
+          "bySursa": {
+            "A": 159824000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "11",
+          "total": 99510000,
+          "bySursa": {
+            "A": 99510000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "61",
+          "total": 84490000,
+          "bySursa": {
+            "A": 84490000
+          },
+          "byCE": [
+            {
+              "ce": "51",
+              "total": 65279000
+            },
+            {
+              "ce": "55",
+              "total": 11250000
+            },
+            {
+              "ce": "71",
+              "total": 5429000
+            },
+            {
+              "ce": "20",
+              "total": 2532000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 73764000,
+          "bySursa": {
+            "A": 73764000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "36",
+          "total": 67407000,
+          "bySursa": {
+            "A": 67407000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "54",
+          "total": 65956000,
+          "bySursa": {
+            "A": 65956000
+          },
+          "byCE": [
+            {
+              "ce": "51",
+              "total": 62406000
+            },
+            {
+              "ce": "50",
+              "total": 3000000
+            },
+            {
+              "ce": "55",
+              "total": 550000
+            }
+          ]
+        },
+        {
+          "cf": "16",
+          "total": 65587000,
+          "bySursa": {
+            "A": 65587000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "65",
+          "total": 58994000,
+          "bySursa": {
+            "A": 58424000,
+            "D": 570000
+          },
+          "byCE": [
+            {
+              "ce": "81",
+              "total": 35448000
+            },
+            {
+              "ce": "51",
+              "total": 22415000
+            },
+            {
+              "ce": "58",
+              "total": 631000
+            },
+            {
+              "ce": "20",
+              "total": 500000
+            }
+          ]
+        },
+        {
+          "cf": "30",
+          "total": 50235000,
+          "bySursa": {
+            "A": 50235000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "03",
+          "total": 45000000,
+          "bySursa": {
+            "A": 45000000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 19188000,
+          "bySursa": {
+            "A": 19188000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "18",
+          "total": 13989000,
+          "bySursa": {
+            "A": 13989000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "66",
+          "total": 4509000,
+          "bySursa": {
+            "A": 4509000
+          },
+          "byCE": [
+            {
+              "ce": "71",
+              "total": 4502000
+            },
+            {
+              "ce": "81",
+              "total": 7000
+            }
+          ]
+        },
+        {
+          "cf": "35",
+          "total": 3000000,
+          "bySursa": {
+            "A": 3000000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "37",
+          "total": 2600000,
+          "bySursa": {
+            "A": 2600000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "39",
+          "total": 2300000,
+          "bySursa": {
+            "A": 2300000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "48",
+          "total": 1140000,
+          "bySursa": {
+            "A": 570000,
+            "D": 570000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "87",
+          "total": 550000,
+          "bySursa": {
+            "A": 550000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 500000
+            },
+            {
+              "ce": "55",
+              "total": 50000
+            }
+          ]
+        },
+        {
+          "cf": "60",
+          "total": 13000,
+          "bySursa": {
+            "A": 13000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 12000
+            },
+            {
+              "ce": "71",
+              "total": 1000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.44.1.1",
+      "fileRef": "2.44.1.1",
+      "name": "Centralizator Spitale",
+      "codFiscal": "25502860",
+      "category": "sanatate",
+      "totalBuget": 6697560000,
+      "bySursa": {
+        "F": 6697560000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 3348780000,
+          "bySursa": {
+            "F": 3348780000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 1592514000
+            },
+            {
+              "ce": "10",
+              "total": 1541456000
+            },
+            {
+              "ce": "71",
+              "total": 136575000
+            },
+            {
+              "ce": "56",
+              "total": 34653000
+            },
+            {
+              "ce": "60",
+              "total": 29542000
+            },
+            {
+              "ce": "59",
+              "total": 16758000
+            },
+            {
+              "ce": "85",
+              "total": -2718000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 1820449000,
+          "bySursa": {
+            "F": 1820449000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 1114440000,
+          "bySursa": {
+            "F": 1114440000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 349924000,
+          "bySursa": {
+            "F": 349924000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "45",
+          "total": 33567000,
+          "bySursa": {
+            "F": 33567000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 30199000,
+          "bySursa": {
+            "F": 30199000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "37",
+          "total": 201000,
+          "bySursa": {
+            "F": 201000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.33",
+      "fileRef": "2.33",
+      "name": "Directia Generala De Asistenta Sociala A Municipiului Bucuresti",
+      "codFiscal": "15531230",
+      "category": "social",
+      "totalBuget": 950972000,
+      "bySursa": {
+        "G": 950972000
+      },
+      "byCF": [
+        {
+          "cf": "68",
+          "total": 475117000,
+          "bySursa": {
+            "G": 475117000
+          },
+          "byCE": [
+            {
+              "ce": "57",
+              "total": 320000000
+            },
+            {
+              "ce": "20",
+              "total": 56300000
+            },
+            {
+              "ce": "10",
+              "total": 55928000
+            },
+            {
+              "ce": "71",
+              "total": 40516000
+            },
+            {
+              "ce": "58",
+              "total": 1039000
+            },
+            {
+              "ce": "56",
+              "total": 903000
+            },
+            {
+              "ce": "59",
+              "total": 416000
+            },
+            {
+              "ce": "55",
+              "total": 15000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 469238000,
+          "bySursa": {
+            "G": 469238000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 5364000,
+          "bySursa": {
+            "G": 5364000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 523000,
+          "bySursa": {
+            "G": 523000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "67",
+          "total": 369000,
+          "bySursa": {
+            "G": 369000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 258000
+            },
+            {
+              "ce": "10",
+              "total": 111000
+            }
+          ]
+        },
+        {
+          "cf": "45",
+          "total": 361000,
+          "bySursa": {
+            "G": 361000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.44",
+      "fileRef": "2.44",
+      "name": "Administratia Spitalelor si Serviciilor Medicale - Bucuresti",
+      "codFiscal": "25502860",
+      "category": "sanatate",
+      "totalBuget": 720000000,
+      "bySursa": {
+        "A": 720000000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 720000000,
+          "bySursa": {
+            "A": 720000000
+          },
+          "byCE": [
+            {
+              "ce": "71",
+              "total": 194267000
+            },
+            {
+              "ce": "51",
+              "total": 188082000
+            },
+            {
+              "ce": "10",
+              "total": 155200000
+            },
+            {
+              "ce": "20",
+              "total": 109558000
+            },
+            {
+              "ce": "60",
+              "total": 71593000
+            },
+            {
+              "ce": "59",
+              "total": 1300000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.41",
+      "fileRef": "2.41",
+      "name": "Administratia Strazilor",
+      "codFiscal": "4433872",
+      "category": "infrastructura",
+      "totalBuget": 504194000,
+      "bySursa": {
+        "G": 504194000
+      },
+      "byCF": [
+        {
+          "cf": "43",
+          "total": 244935000,
+          "bySursa": {
+            "G": 244935000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "84",
+          "total": 241484000,
+          "bySursa": {
+            "G": 241484000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 151143000
+            },
+            {
+              "ce": "71",
+              "total": 64722000
+            },
+            {
+              "ce": "10",
+              "total": 23969000
+            },
+            {
+              "ce": "59",
+              "total": 1650000
+            }
+          ]
+        },
+        {
+          "cf": "70",
+          "total": 7253000,
+          "bySursa": {
+            "G": 7253000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 7253000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 7162000,
+          "bySursa": {
+            "G": 7162000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "74",
+          "total": 3360000,
+          "bySursa": {
+            "G": 3360000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 3360000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.42",
+      "fileRef": "2.42",
+      "name": "Administratia Municipala Pentru Consolidarea Cladirilor Cu Risc Seismic Bucuresti",
+      "codFiscal": "37047959",
+      "category": "infrastructura",
+      "totalBuget": 433638000,
+      "bySursa": {
+        "B": 192764000,
+        "D": 7606000,
+        "G": 233268000
+      },
+      "byCF": [
+        {
+          "cf": "70",
+          "total": 216819000,
+          "bySursa": {
+            "B": 96382000,
+            "D": 3803000,
+            "G": 116634000
+          },
+          "byCE": [
+            {
+              "ce": "71",
+              "total": 159180000
+            },
+            {
+              "ce": "60",
+              "total": 35387000
+            },
+            {
+              "ce": "10",
+              "total": 11350000
+            },
+            {
+              "ce": "20",
+              "total": 4455000
+            },
+            {
+              "ce": "56",
+              "total": 3803000
+            },
+            {
+              "ce": "30",
+              "total": 2500000
+            },
+            {
+              "ce": "59",
+              "total": 120000
+            },
+            {
+              "ce": "61",
+              "total": 24000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 113640000,
+          "bySursa": {
+            "G": 113640000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "41",
+          "total": 96382000,
+          "bySursa": {
+            "B": 96382000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "45",
+          "total": 3803000,
+          "bySursa": {
+            "D": 3803000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "36",
+          "total": 2994000,
+          "bySursa": {
+            "G": 2994000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.46",
+      "fileRef": "2.46",
+      "name": "Administratia Domeniului Public a Municipiului Bucuresti",
+      "codFiscal": "42671178",
+      "category": "infrastructura",
+      "totalBuget": 280748000,
+      "bySursa": {
+        "G": 280748000
+      },
+      "byCF": [
+        {
+          "cf": "43",
+          "total": 117938000,
+          "bySursa": {
+            "G": 117938000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "67",
+          "total": 72213000,
+          "bySursa": {
+            "G": 72213000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 69682000
+            },
+            {
+              "ce": "71",
+              "total": 2431000
+            },
+            {
+              "ce": "59",
+              "total": 100000
+            }
+          ]
+        },
+        {
+          "cf": "54",
+          "total": 51934000,
+          "bySursa": {
+            "G": 51934000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 23857000
+            },
+            {
+              "ce": "20",
+              "total": 19760000
+            },
+            {
+              "ce": "71",
+              "total": 7920000
+            },
+            {
+              "ce": "59",
+              "total": 397000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 22436000,
+          "bySursa": {
+            "G": 22436000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "70",
+          "total": 16227000,
+          "bySursa": {
+            "G": 16227000
+          },
+          "byCE": [
+            {
+              "ce": "71",
+              "total": 16227000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.45",
+      "fileRef": "2.45",
+      "name": "Arte si Evenimente Urbane Bucuresti",
+      "codFiscal": "42671177",
+      "category": "cultura",
+      "totalBuget": 137794000,
+      "bySursa": {
+        "G": 137794000
+      },
+      "byCF": [
+        {
+          "cf": "43",
+          "total": 57867000,
+          "bySursa": {
+            "G": 57867000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "67",
+          "total": 57405000,
+          "bySursa": {
+            "G": 57405000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 46021000
+            },
+            {
+              "ce": "10",
+              "total": 11284000
+            },
+            {
+              "ce": "59",
+              "total": 100000
+            }
+          ]
+        },
+        {
+          "cf": "65",
+          "total": 11492000,
+          "bySursa": {
+            "G": 11492000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 11482000
+            },
+            {
+              "ce": "71",
+              "total": 10000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 11030000,
+          "bySursa": {
+            "G": 11030000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.40",
+      "fileRef": "2.40",
+      "name": "Administratia Lacuri Parcuri si Agrement Bucuresti",
+      "codFiscal": "14008314",
+      "category": "infrastructura",
+      "totalBuget": 132330000,
+      "bySursa": {
+        "G": 132330000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 66165000,
+          "bySursa": {
+            "G": 66165000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 53459000
+            },
+            {
+              "ce": "10",
+              "total": 12031000
+            },
+            {
+              "ce": "71",
+              "total": 375000
+            },
+            {
+              "ce": "59",
+              "total": 300000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 54665000,
+          "bySursa": {
+            "G": 54665000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 11500000,
+          "bySursa": {
+            "G": 11500000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.35",
+      "fileRef": "2.35",
+      "name": "Directia Generala de Politie Locala si Control a Municipiului Bucuresti",
+      "codFiscal": "28412052",
+      "category": "administratie",
+      "totalBuget": 130558000,
+      "bySursa": {
+        "G": 130558000
+      },
+      "byCF": [
+        {
+          "cf": "43",
+          "total": 65279000,
+          "bySursa": {
+            "G": 65279000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "61",
+          "total": 65279000,
+          "bySursa": {
+            "G": 65279000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 61375000
+            },
+            {
+              "ce": "20",
+              "total": 2748000
+            },
+            {
+              "ce": "71",
+              "total": 1156000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.22",
+      "fileRef": "2.22",
+      "name": "Clubul Sportiv Municipal Bucuresti",
+      "codFiscal": "22389856",
+      "category": "sport_educatie",
+      "totalBuget": 126744000,
+      "bySursa": {
+        "G": 126744000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 63372000,
+          "bySursa": {
+            "G": 63372000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 52383000
+            },
+            {
+              "ce": "71",
+              "total": 7602000
+            },
+            {
+              "ce": "10",
+              "total": 3377000
+            },
+            {
+              "ce": "59",
+              "total": 10000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 60962000,
+          "bySursa": {
+            "G": 60962000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 2000000,
+          "bySursa": {
+            "G": 2000000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "37",
+          "total": 409000,
+          "bySursa": {
+            "G": 409000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "35",
+          "total": 1000,
+          "bySursa": {
+            "G": 1000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.4",
+      "fileRef": "2.4",
+      "name": "Palatele Brancovenesti de la Portile Bucurestiului",
+      "codFiscal": "4283520",
+      "category": "cultura",
+      "totalBuget": 72856000,
+      "bySursa": {
+        "G": 72856000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 36428000,
+          "bySursa": {
+            "G": 36428000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 24062000
+            },
+            {
+              "ce": "10",
+              "total": 7405000
+            },
+            {
+              "ce": "71",
+              "total": 4833000
+            },
+            {
+              "ce": "59",
+              "total": 128000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 33428000,
+          "bySursa": {
+            "G": 33428000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 3000000,
+          "bySursa": {
+            "G": 3000000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.19",
+      "fileRef": "2.19",
+      "name": "Opera Comica pentru Copii",
+      "codFiscal": "15263455",
+      "category": "cultura",
+      "totalBuget": 71044000,
+      "bySursa": {
+        "G": 71044000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 35522000,
+          "bySursa": {
+            "G": 35522000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 25416000
+            },
+            {
+              "ce": "10",
+              "total": 10052000
+            },
+            {
+              "ce": "59",
+              "total": 54000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 24472000,
+          "bySursa": {
+            "G": 24472000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 8600000,
+          "bySursa": {
+            "G": 8600000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "36",
+          "total": 2450000,
+          "bySursa": {
+            "G": 2450000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.32",
+      "fileRef": "2.32",
+      "name": "Centrul De Creatie, Arta Si Traditie Al Municipiului Bucuresti",
+      "codFiscal": "4266901",
+      "category": "cultura",
+      "totalBuget": 64482000,
+      "bySursa": {
+        "G": 64482000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 32241000,
+          "bySursa": {
+            "G": 32241000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 29592000
+            },
+            {
+              "ce": "10",
+              "total": 2716000
+            },
+            {
+              "ce": "85",
+              "total": -67000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 32146000,
+          "bySursa": {
+            "G": 32146000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 95000,
+          "bySursa": {
+            "G": 95000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.37",
+      "fileRef": "2.37",
+      "name": "Administratia Cimitirelor Si Crematoriilor Umane",
+      "codFiscal": "9791650",
+      "category": "infrastructura",
+      "totalBuget": 63158000,
+      "bySursa": {
+        "G": 63158000
+      },
+      "byCF": [
+        {
+          "cf": "54",
+          "total": 31579000,
+          "bySursa": {
+            "G": 31579000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 18630000
+            },
+            {
+              "ce": "10",
+              "total": 12785000
+            },
+            {
+              "ce": "59",
+              "total": 164000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 18000000,
+          "bySursa": {
+            "G": 18000000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 13579000,
+          "bySursa": {
+            "G": 13579000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.36",
+      "fileRef": "2.36",
+      "name": "Autoritatea Pentru Supravegherea Si Protectia Animalelor",
+      "codFiscal": "27243460",
+      "category": "infrastructura",
+      "totalBuget": 49890000,
+      "bySursa": {
+        "G": 49890000
+      },
+      "byCF": [
+        {
+          "cf": "74",
+          "total": 24945000,
+          "bySursa": {
+            "G": 24945000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 14492000
+            },
+            {
+              "ce": "10",
+              "total": 5922000
+            },
+            {
+              "ce": "71",
+              "total": 4408000
+            },
+            {
+              "ce": "59",
+              "total": 123000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 24895000,
+          "bySursa": {
+            "G": 24895000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 50000,
+          "bySursa": {
+            "G": 50000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.2",
+      "fileRef": "2.2",
+      "name": "Muzeul Municipiului Bucuresti",
+      "codFiscal": "4221217",
+      "category": "cultura",
+      "totalBuget": 44516000,
+      "bySursa": {
+        "G": 44516000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 22258000,
+          "bySursa": {
+            "G": 22258000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 11212000
+            },
+            {
+              "ce": "20",
+              "total": 10047000
+            },
+            {
+              "ce": "71",
+              "total": 872000
+            },
+            {
+              "ce": "59",
+              "total": 127000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 20650000,
+          "bySursa": {
+            "G": 20650000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 1608000,
+          "bySursa": {
+            "G": 1608000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.5",
+      "fileRef": "2.5",
+      "name": "Teatrul C. I. Nottara",
+      "codFiscal": "4266634",
+      "category": "cultura",
+      "totalBuget": 43160000,
+      "bySursa": {
+        "G": 43160000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 21580000,
+          "bySursa": {
+            "G": 21580000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 17176000
+            },
+            {
+              "ce": "20",
+              "total": 4288000
+            },
+            {
+              "ce": "59",
+              "total": 273000
+            },
+            {
+              "ce": "71",
+              "total": 4000
+            },
+            {
+              "ce": "85",
+              "total": -161000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 19280000,
+          "bySursa": {
+            "G": 19280000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 2300000,
+          "bySursa": {
+            "G": 2300000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.12",
+      "fileRef": "2.12",
+      "name": "TEATRUL ION CREANGA",
+      "codFiscal": "4266510",
+      "category": "cultura",
+      "totalBuget": 42158000,
+      "bySursa": {
+        "G": 42158000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 21079000,
+          "bySursa": {
+            "G": 21079000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 14752000
+            },
+            {
+              "ce": "20",
+              "total": 6099000
+            },
+            {
+              "ce": "59",
+              "total": 215000
+            },
+            {
+              "ce": "71",
+              "total": 13000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 19329000,
+          "bySursa": {
+            "G": 19329000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 1750000,
+          "bySursa": {
+            "G": 1750000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.13",
+      "fileRef": "2.13",
+      "name": "Teatrul Lucia Sturdza Bulandra",
+      "codFiscal": "4220955",
+      "category": "cultura",
+      "totalBuget": 41866000,
+      "bySursa": {
+        "G": 41866000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 20933000,
+          "bySursa": {
+            "G": 20933000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 15291000
+            },
+            {
+              "ce": "20",
+              "total": 5055000
+            },
+            {
+              "ce": "71",
+              "total": 390000
+            },
+            {
+              "ce": "59",
+              "total": 197000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 17933000,
+          "bySursa": {
+            "G": 17933000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 3000000,
+          "bySursa": {
+            "G": 3000000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.20",
+      "fileRef": "2.20",
+      "name": "Circul Metropolitan Bucuresti",
+      "codFiscal": "4203873",
+      "category": "cultura",
+      "totalBuget": 41538000,
+      "bySursa": {
+        "G": 41538000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 20769000,
+          "bySursa": {
+            "G": 20769000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 13838000
+            },
+            {
+              "ce": "20",
+              "total": 6720000
+            },
+            {
+              "ce": "59",
+              "total": 211000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 16169000,
+          "bySursa": {
+            "G": 16169000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 4600000,
+          "bySursa": {
+            "G": 4600000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.38",
+      "fileRef": "2.38",
+      "name": "Administratia Fondului Imobiliar",
+      "codFiscal": "5110730",
+      "category": "infrastructura",
+      "totalBuget": 39017000,
+      "bySursa": {
+        "A": 39017000
+      },
+      "byCF": [
+        {
+          "cf": "70",
+          "total": 39017000,
+          "bySursa": {
+            "A": 39017000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 14760000
+            },
+            {
+              "ce": "71",
+              "total": 11960000
+            },
+            {
+              "ce": "10",
+              "total": 11921000
+            },
+            {
+              "ce": "59",
+              "total": 376000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.7",
+      "fileRef": "2.7",
+      "name": "Teatrul De Comedie",
+      "codFiscal": "4221152",
+      "category": "cultura",
+      "totalBuget": 37888000,
+      "bySursa": {
+        "G": 37888000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 18944000,
+          "bySursa": {
+            "G": 18944000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 13442000
+            },
+            {
+              "ce": "20",
+              "total": 5206000
+            },
+            {
+              "ce": "59",
+              "total": 204000
+            },
+            {
+              "ce": "71",
+              "total": 92000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 15744000,
+          "bySursa": {
+            "G": 15744000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 3200000,
+          "bySursa": {
+            "G": 3200000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.16",
+      "fileRef": "2.16",
+      "name": "Teatrul Odeon",
+      "codFiscal": "4316031",
+      "category": "cultura",
+      "totalBuget": 37170000,
+      "bySursa": {
+        "G": 37170000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 18585000,
+          "bySursa": {
+            "G": 18585000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 14850000
+            },
+            {
+              "ce": "20",
+              "total": 3189000
+            },
+            {
+              "ce": "71",
+              "total": 341000
+            },
+            {
+              "ce": "59",
+              "total": 205000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 16335000,
+          "bySursa": {
+            "G": 16335000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 2250000,
+          "bySursa": {
+            "G": 2250000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.15",
+      "fileRef": "2.15",
+      "name": "Teatrul Mic, Bucuresti",
+      "codFiscal": "4267036",
+      "category": "cultura",
+      "totalBuget": 36644000,
+      "bySursa": {
+        "G": 36644000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 18322000,
+          "bySursa": {
+            "G": 18322000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 14870000
+            },
+            {
+              "ce": "20",
+              "total": 2888000
+            },
+            {
+              "ce": "71",
+              "total": 288000
+            },
+            {
+              "ce": "59",
+              "total": 253000
+            },
+            {
+              "ce": "85",
+              "total": 23000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 16972000,
+          "bySursa": {
+            "G": 16972000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 1350000,
+          "bySursa": {
+            "G": 1350000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.39",
+      "fileRef": "2.39",
+      "name": "Administratia Gradina Zoologica Bucuresti",
+      "codFiscal": "4505375",
+      "category": "infrastructura",
+      "totalBuget": 35160000,
+      "bySursa": {
+        "G": 35160000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 17580000,
+          "bySursa": {
+            "G": 17580000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 9574000
+            },
+            {
+              "ce": "10",
+              "total": 6979000
+            },
+            {
+              "ce": "59",
+              "total": 575000
+            },
+            {
+              "ce": "71",
+              "total": 452000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 15580000,
+          "bySursa": {
+            "G": 15580000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 2000000,
+          "bySursa": {
+            "G": 2000000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.8",
+      "fileRef": "2.8",
+      "name": "Teatrul De Revista Constantin Tanase",
+      "codFiscal": "4192677",
+      "category": "cultura",
+      "totalBuget": 32886000,
+      "bySursa": {
+        "G": 32886000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 16443000,
+          "bySursa": {
+            "G": 16443000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 13490000
+            },
+            {
+              "ce": "20",
+              "total": 2785000
+            },
+            {
+              "ce": "59",
+              "total": 151000
+            },
+            {
+              "ce": "71",
+              "total": 17000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 15043000,
+          "bySursa": {
+            "G": 15043000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 1400000,
+          "bySursa": {
+            "G": 1400000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.27",
+      "fileRef": "2.27",
+      "name": "Centrul De Proiecte Culturale - Arcub",
+      "codFiscal": "9658744",
+      "category": "cultura",
+      "totalBuget": 31812000,
+      "bySursa": {
+        "G": 31812000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 15906000,
+          "bySursa": {
+            "G": 15906000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 13158000
+            },
+            {
+              "ce": "10",
+              "total": 2736000
+            },
+            {
+              "ce": "71",
+              "total": 12000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 15303000,
+          "bySursa": {
+            "G": 15303000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 500000,
+          "bySursa": {
+            "G": 500000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "37",
+          "total": 103000,
+          "bySursa": {
+            "G": 103000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.10",
+      "fileRef": "2.10",
+      "name": "Teatrul Evreiesc de Stat Bucuresti",
+      "codFiscal": "4192979",
+      "category": "cultura",
+      "totalBuget": 30910000,
+      "bySursa": {
+        "G": 30910000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 15455000,
+          "bySursa": {
+            "G": 15455000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 12491000
+            },
+            {
+              "ce": "20",
+              "total": 2440000
+            },
+            {
+              "ce": "71",
+              "total": 333000
+            },
+            {
+              "ce": "59",
+              "total": 191000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 14855000,
+          "bySursa": {
+            "G": 14855000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 600000,
+          "bySursa": {
+            "G": 600000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.28",
+      "fileRef": "2.28",
+      "name": "Centrul de Proiecte Educationale si Sportive Bucuresti - PROEDUS",
+      "codFiscal": "26597213",
+      "category": "sport_educatie",
+      "totalBuget": 29138000,
+      "bySursa": {
+        "G": 29138000
+      },
+      "byCF": [
+        {
+          "cf": "65",
+          "total": 14569000,
+          "bySursa": {
+            "G": 14569000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 12041000
+            },
+            {
+              "ce": "10",
+              "total": 2519000
+            },
+            {
+              "ce": "59",
+              "total": 48000
+            },
+            {
+              "ce": "58",
+              "total": 16000
+            },
+            {
+              "ce": "85",
+              "total": -55000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 13953000,
+          "bySursa": {
+            "G": 13953000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 600000,
+          "bySursa": {
+            "G": 600000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "48",
+          "total": 16000,
+          "bySursa": {
+            "G": 16000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.3",
+      "fileRef": "2.3",
+      "name": "Muzeul National al Literaturii Romane",
+      "codFiscal": "4192510",
+      "category": "cultura",
+      "totalBuget": 27112000,
+      "bySursa": {
+        "G": 27112000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 13556000,
+          "bySursa": {
+            "G": 13556000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 6935000
+            },
+            {
+              "ce": "20",
+              "total": 6258000
+            },
+            {
+              "ce": "71",
+              "total": 325000
+            },
+            {
+              "ce": "59",
+              "total": 38000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 12756000,
+          "bySursa": {
+            "G": 12756000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 800000,
+          "bySursa": {
+            "G": 800000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.34",
+      "fileRef": "2.34",
+      "name": "Directia Generala De Evidenta Persoanelor",
+      "codFiscal": "17180127",
+      "category": "administratie",
+      "totalBuget": 27074000,
+      "bySursa": {
+        "G": 27074000
+      },
+      "byCF": [
+        {
+          "cf": "54",
+          "total": 13537000,
+          "bySursa": {
+            "G": 13537000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 12293000
+            },
+            {
+              "ce": "20",
+              "total": 1244000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 13529000,
+          "bySursa": {
+            "G": 13529000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 8000,
+          "bySursa": {
+            "G": 8000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.11",
+      "fileRef": "2.11",
+      "name": "Teatrul Excelsior",
+      "codFiscal": "4316651",
+      "category": "cultura",
+      "totalBuget": 24800000,
+      "bySursa": {
+        "G": 24800000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 12400000,
+          "bySursa": {
+            "G": 12400000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 8001000
+            },
+            {
+              "ce": "20",
+              "total": 4260000
+            },
+            {
+              "ce": "59",
+              "total": 215000
+            },
+            {
+              "ce": "85",
+              "total": -76000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 10350000,
+          "bySursa": {
+            "G": 10350000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 2050000,
+          "bySursa": {
+            "G": 2050000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.6",
+      "fileRef": "2.6",
+      "name": "Teatrul de Animatie Tandarica, Bucuresti",
+      "codFiscal": "4192707",
+      "category": "cultura",
+      "totalBuget": 24360000,
+      "bySursa": {
+        "G": 24360000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 12180000,
+          "bySursa": {
+            "G": 12180000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 7831000
+            },
+            {
+              "ce": "20",
+              "total": 3829000
+            },
+            {
+              "ce": "71",
+              "total": 390000
+            },
+            {
+              "ce": "59",
+              "total": 130000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 9600000,
+          "bySursa": {
+            "G": 9600000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 2580000,
+          "bySursa": {
+            "G": 2580000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.18",
+      "fileRef": "2.18",
+      "name": "Teatrul Tineretului Metropolis",
+      "codFiscal": "4659366",
+      "category": "cultura",
+      "totalBuget": 21262000,
+      "bySursa": {
+        "G": 21262000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 10631000,
+          "bySursa": {
+            "G": 10631000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 5813000
+            },
+            {
+              "ce": "20",
+              "total": 4675000
+            },
+            {
+              "ce": "59",
+              "total": 93000
+            },
+            {
+              "ce": "71",
+              "total": 50000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 8231000,
+          "bySursa": {
+            "G": 8231000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 2400000,
+          "bySursa": {
+            "G": 2400000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.17",
+      "fileRef": "2.17",
+      "name": "Teatrul Stela Popescu, Bucuresti",
+      "codFiscal": "36097576",
+      "category": "cultura",
+      "totalBuget": 16082000,
+      "bySursa": {
+        "G": 16082000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 8041000,
+          "bySursa": {
+            "G": 8041000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 6438000
+            },
+            {
+              "ce": "20",
+              "total": 1632000
+            },
+            {
+              "ce": "59",
+              "total": 51000
+            },
+            {
+              "ce": "85",
+              "total": -80000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 7341000,
+          "bySursa": {
+            "G": 7341000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 700000,
+          "bySursa": {
+            "G": 700000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.1",
+      "fileRef": "2.1",
+      "name": "Biblioteca Metropolitana Bucuresti",
+      "codFiscal": "4505405",
+      "category": "cultura",
+      "totalBuget": 15309000,
+      "bySursa": {
+        "A": 15309000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 15309000,
+          "bySursa": {
+            "A": 15309000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 11917000
+            },
+            {
+              "ce": "20",
+              "total": 3099000
+            },
+            {
+              "ce": "59",
+              "total": 213000
+            },
+            {
+              "ce": "71",
+              "total": 80000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.9",
+      "fileRef": "2.9",
+      "name": "Teatrul Dramaturgilor Romani",
+      "codFiscal": "37143247",
+      "category": "cultura",
+      "totalBuget": 14770000,
+      "bySursa": {
+        "G": 14770000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 7385000,
+          "bySursa": {
+            "G": 7385000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 3940000
+            },
+            {
+              "ce": "20",
+              "total": 3055000
+            },
+            {
+              "ce": "71",
+              "total": 390000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 6585000,
+          "bySursa": {
+            "G": 6585000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 800000,
+          "bySursa": {
+            "G": 800000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.14",
+      "fileRef": "2.14",
+      "name": "Teatrul Masca",
+      "codFiscal": "4364640",
+      "category": "cultura",
+      "totalBuget": 13800000,
+      "bySursa": {
+        "G": 13800000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 6900000,
+          "bySursa": {
+            "G": 6900000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 4387000
+            },
+            {
+              "ce": "20",
+              "total": 2507000
+            },
+            {
+              "ce": "71",
+              "total": 6000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 6000000,
+          "bySursa": {
+            "G": 6000000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 900000,
+          "bySursa": {
+            "G": 900000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.43",
+      "fileRef": "2.43",
+      "name": "Administratia Parcul Natural Vacaresti",
+      "codFiscal": "45223371",
+      "category": "infrastructura",
+      "totalBuget": 8964000,
+      "bySursa": {
+        "G": 8964000
+      },
+      "byCF": [
+        {
+          "cf": "43",
+          "total": 4482000,
+          "bySursa": {
+            "G": 4482000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "74",
+          "total": 4482000,
+          "bySursa": {
+            "G": 4482000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 3242000
+            },
+            {
+              "ce": "10",
+              "total": 1210000
+            },
+            {
+              "ce": "71",
+              "total": 30000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.21",
+      "fileRef": "2.21",
+      "name": "Scoala De Arta Bucuresti",
+      "codFiscal": "4193060",
+      "category": "sport_educatie",
+      "totalBuget": 3952000,
+      "bySursa": {
+        "G": 3952000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 1976000,
+          "bySursa": {
+            "G": 1976000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 1158000
+            },
+            {
+              "ce": "20",
+              "total": 818000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 1706000,
+          "bySursa": {
+            "G": 1706000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 270000,
+          "bySursa": {
+            "G": 270000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.24",
+      "fileRef": "2.24",
+      "name": "Centrul Metropolitan de Educatie si Cultura Ioan I. Dalles Bucuresti",
+      "codFiscal": "4266693",
+      "category": "cultura",
+      "totalBuget": 3616000,
+      "bySursa": {
+        "G": 3616000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 1808000,
+          "bySursa": {
+            "G": 1808000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 840000
+            },
+            {
+              "ce": "20",
+              "total": 835000
+            },
+            {
+              "ce": "71",
+              "total": 133000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 1308000,
+          "bySursa": {
+            "G": 1308000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 500000,
+          "bySursa": {
+            "G": 500000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.26",
+      "fileRef": "2.26",
+      "name": "Centrul Cultural Lumina",
+      "codFiscal": "39466317",
+      "category": "cultura",
+      "totalBuget": 3482000,
+      "bySursa": {
+        "G": 3482000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 1741000,
+          "bySursa": {
+            "G": 1741000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 1444000
+            },
+            {
+              "ce": "10",
+              "total": 297000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 1721000,
+          "bySursa": {
+            "G": 1721000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 20000,
+          "bySursa": {
+            "G": 20000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.31",
+      "fileRef": "2.31",
+      "name": "Centrul pentru Tineret al Municipiului Bucuresti",
+      "codFiscal": "36860537",
+      "category": "social",
+      "totalBuget": 1955000,
+      "bySursa": {
+        "A": 1955000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 1955000,
+          "bySursa": {
+            "A": 1955000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 1200000
+            },
+            {
+              "ce": "10",
+              "total": 750000
+            },
+            {
+              "ce": "59",
+              "total": 5000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.29",
+      "fileRef": "2.29",
+      "name": "Centrul de Protectie a Plantelor Bucuresti",
+      "codFiscal": "12194458",
+      "category": "infrastructura",
+      "totalBuget": 1949000,
+      "bySursa": {
+        "A": 1949000
+      },
+      "byCF": [
+        {
+          "cf": "83",
+          "total": 1949000,
+          "bySursa": {
+            "A": 1949000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 1441000
+            },
+            {
+              "ce": "20",
+              "total": 508000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.25",
+      "fileRef": "2.25",
+      "name": "Centrul Cultural Expo Arte",
+      "codFiscal": "39702183",
+      "category": "cultura",
+      "totalBuget": 1754000,
+      "bySursa": {
+        "G": 1754000
+      },
+      "byCF": [
+        {
+          "cf": "43",
+          "total": 877000,
+          "bySursa": {
+            "G": 877000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "67",
+          "total": 877000,
+          "bySursa": {
+            "G": 877000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 499000
+            },
+            {
+              "ce": "10",
+              "total": 378000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2.23",
+      "fileRef": "2.23",
+      "name": "Casa de Cultura Friederich Schiller",
+      "codFiscal": "4992980",
+      "category": "cultura",
+      "totalBuget": 1424000,
+      "bySursa": {
+        "G": 1424000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 712000,
+          "bySursa": {
+            "G": 712000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 468000
+            },
+            {
+              "ce": "10",
+              "total": 217000
+            },
+            {
+              "ce": "71",
+              "total": 27000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 562000,
+          "bySursa": {
+            "G": 562000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 150000,
+          "bySursa": {
+            "G": 150000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2.30",
+      "fileRef": "2.30",
+      "name": "Centrul pentru Seniori al Municipiului Bucuresti",
+      "codFiscal": "38502276",
+      "category": "social",
+      "totalBuget": 1000,
+      "bySursa": {
+        "A": 1000
+      },
+      "byCF": [
+        {
+          "cf": "67",
+          "total": 1000,
+          "bySursa": {
+            "A": 1000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 1000
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "hospitals": [
+    {
+      "id": "7-colentina-cui-4283929",
+      "fileRef": "7_COLENTINA CUI 4283929",
+      "name": "Spitalul Clinic Colentina Bucuresti",
+      "codFiscal": "4283929",
+      "category": "sanatate",
+      "totalBuget": 1084128000,
+      "bySursa": {
+        "F": 1084128000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 542064000,
+          "bySursa": {
+            "F": 542064000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 308918000
+            },
+            {
+              "ce": "10",
+              "total": 227516000
+            },
+            {
+              "ce": "71",
+              "total": 4530000
+            },
+            {
+              "ce": "59",
+              "total": 1100000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 343367000,
+          "bySursa": {
+            "F": 343367000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 158030000,
+          "bySursa": {
+            "F": 158030000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 40667000,
+          "bySursa": {
+            "F": 40667000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "12-coltea-cui-4192960",
+      "fileRef": "12_COLTEA CUI 4192960",
+      "name": "Spitalul Clinic Coltea Bucuresti",
+      "codFiscal": "4192960",
+      "category": "sanatate",
+      "totalBuget": 709238000,
+      "bySursa": {
+        "F": 709238000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 354619000,
+          "bySursa": {
+            "F": 354619000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 212453000
+            },
+            {
+              "ce": "10",
+              "total": 121558000
+            },
+            {
+              "ce": "71",
+              "total": 19404000
+            },
+            {
+              "ce": "59",
+              "total": 1204000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 235195000,
+          "bySursa": {
+            "F": 235195000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 92460000,
+          "bySursa": {
+            "F": 92460000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 26964000,
+          "bySursa": {
+            "F": 26964000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "19-obregia-cui-4266162",
+      "fileRef": "19_OBREGIA CUI 4266162",
+      "name": "Spitalul Clinic de Psihiatrie Prof. Dr. Al. Obregia Bucuresti",
+      "codFiscal": "4266162",
+      "category": "sanatate",
+      "totalBuget": 684090000,
+      "bySursa": {
+        "F": 684090000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 342045000,
+          "bySursa": {
+            "F": 342045000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 194993000
+            },
+            {
+              "ce": "20",
+              "total": 141480000
+            },
+            {
+              "ce": "71",
+              "total": 3742000
+            },
+            {
+              "ce": "59",
+              "total": 1830000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 169650000,
+          "bySursa": {
+            "F": 169650000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 120027000,
+          "bySursa": {
+            "F": 120027000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 52368000,
+          "bySursa": {
+            "F": 52368000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "13-babes-cui-4266049",
+      "fileRef": "13_BABES CUI 4266049",
+      "name": "Spitalul Clinic de Boli Infectioase si Tropicale Dr. Victor Babes Bucuresti",
+      "codFiscal": "4266049",
+      "category": "sanatate",
+      "totalBuget": 576954000,
+      "bySursa": {
+        "F": 576954000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 288477000,
+          "bySursa": {
+            "F": 288477000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 162990000
+            },
+            {
+              "ce": "10",
+              "total": 110656000
+            },
+            {
+              "ce": "71",
+              "total": 10000000
+            },
+            {
+              "ce": "60",
+              "total": 3331000
+            },
+            {
+              "ce": "59",
+              "total": 1500000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 197196000,
+          "bySursa": {
+            "F": 197196000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 85000000,
+          "bySursa": {
+            "F": 85000000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 3331000,
+          "bySursa": {
+            "F": 3331000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 2950000,
+          "bySursa": {
+            "F": 2950000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "6-foisor-cui-5062357",
+      "fileRef": "6_FOISOR CUI 5062357",
+      "name": "Spitalul Clinic de Ortopedie Traumatologie si TBC Osteoarticular Foisor Bucuresti",
+      "codFiscal": "5062357",
+      "category": "sanatate",
+      "totalBuget": 479010000,
+      "bySursa": {
+        "F": 479010000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 239505000,
+          "bySursa": {
+            "F": 239505000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 129549000
+            },
+            {
+              "ce": "10",
+              "total": 89833000
+            },
+            {
+              "ce": "71",
+              "total": 17370000
+            },
+            {
+              "ce": "60",
+              "total": 2367000
+            },
+            {
+              "ce": "59",
+              "total": 600000
+            },
+            {
+              "ce": "85",
+              "total": -214000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 96400000,
+          "bySursa": {
+            "F": 96400000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 89007000,
+          "bySursa": {
+            "F": 89007000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 51731000,
+          "bySursa": {
+            "F": 51731000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 2367000,
+          "bySursa": {
+            "F": 2367000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "15-burghele-cui-4283538",
+      "fileRef": "15_BURGHELE CUI 4283538",
+      "name": "Spitalul Clinic Prof. Dr. Th. Burghele Bucuresti",
+      "codFiscal": "4283538",
+      "category": "sanatate",
+      "totalBuget": 434150000,
+      "bySursa": {
+        "F": 434150000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 217075000,
+          "bySursa": {
+            "F": 217075000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 90253000
+            },
+            {
+              "ce": "10",
+              "total": 84158000
+            },
+            {
+              "ce": "56",
+              "total": 21407000
+            },
+            {
+              "ce": "71",
+              "total": 20550000
+            },
+            {
+              "ce": "59",
+              "total": 707000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 98695000,
+          "bySursa": {
+            "F": 98695000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 70000000,
+          "bySursa": {
+            "F": 70000000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 27402000,
+          "bySursa": {
+            "F": 27402000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "45",
+          "total": 20978000,
+          "bySursa": {
+            "F": 20978000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "37",
+          "total": 0,
+          "bySursa": {
+            "F": 0
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "5-cantacuzino-cui-4203490",
+      "fileRef": "5_CANTACUZINO CUI 4203490",
+      "name": "Spitalul Clinic Dr. I. Cantacuzino Bucuresti",
+      "codFiscal": "4203490",
+      "category": "sanatate",
+      "totalBuget": 431436000,
+      "bySursa": {
+        "F": 431436000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 215718000,
+          "bySursa": {
+            "F": 215718000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 104888000
+            },
+            {
+              "ce": "20",
+              "total": 87261000
+            },
+            {
+              "ce": "56",
+              "total": 11191000
+            },
+            {
+              "ce": "71",
+              "total": 10778000
+            },
+            {
+              "ce": "59",
+              "total": 1600000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 103567000,
+          "bySursa": {
+            "F": 103567000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 83900000,
+          "bySursa": {
+            "F": 83900000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 17060000,
+          "bySursa": {
+            "F": 17060000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "45",
+          "total": 10895000,
+          "bySursa": {
+            "F": 10895000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 296000,
+          "bySursa": {
+            "F": 296000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "10-gomoiu-cui-4283759",
+      "fileRef": "10_GOMOIU CUI 4283759",
+      "name": "Spitalul de Copii Dr. Victor Gomoiu Bucuresti",
+      "codFiscal": "4283759",
+      "category": "sanatate",
+      "totalBuget": 400150000,
+      "bySursa": {
+        "F": 400150000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 200075000,
+          "bySursa": {
+            "F": 200075000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 99560000
+            },
+            {
+              "ce": "10",
+              "total": 92085000
+            },
+            {
+              "ce": "60",
+              "total": 5907000
+            },
+            {
+              "ce": "71",
+              "total": 1823000
+            },
+            {
+              "ce": "59",
+              "total": 700000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 131896000,
+          "bySursa": {
+            "F": 131896000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 57123000,
+          "bySursa": {
+            "F": 57123000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 5907000,
+          "bySursa": {
+            "F": 5907000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 5149000,
+          "bySursa": {
+            "F": 5149000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "1-sf-maria-cui-4382558",
+      "fileRef": "1_SF MARIA CUI 4382558",
+      "name": "Spitalul Clinic Sfanta Maria Bucuresti",
+      "codFiscal": "4382558",
+      "category": "sanatate",
+      "totalBuget": 333120000,
+      "bySursa": {
+        "F": 333120000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 166560000,
+          "bySursa": {
+            "F": 166560000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 88290000
+            },
+            {
+              "ce": "20",
+              "total": 50786000
+            },
+            {
+              "ce": "71",
+              "total": 21688000
+            },
+            {
+              "ce": "60",
+              "total": 5955000
+            },
+            {
+              "ce": "59",
+              "total": 740000
+            },
+            {
+              "ce": "85",
+              "total": -899000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 83840000,
+          "bySursa": {
+            "F": 83840000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 69373000,
+          "bySursa": {
+            "F": 69373000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 7379000,
+          "bySursa": {
+            "F": 7379000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 5955000,
+          "bySursa": {
+            "F": 5955000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "37",
+          "total": 13000,
+          "bySursa": {
+            "F": 13000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "4-filantropia-cui-4532388",
+      "fileRef": "4_FILANTROPIA CUI 4532388",
+      "name": "Spitalul Clinic Filantropia Bucuresti Bucuresti",
+      "codFiscal": "4532388",
+      "category": "sanatate",
+      "totalBuget": 277346000,
+      "bySursa": {
+        "F": 277346000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 138673000,
+          "bySursa": {
+            "F": 138673000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 76660000
+            },
+            {
+              "ce": "20",
+              "total": 49716000
+            },
+            {
+              "ce": "71",
+              "total": 6996000
+            },
+            {
+              "ce": "60",
+              "total": 5973000
+            },
+            {
+              "ce": "85",
+              "total": -672000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 77700000,
+          "bySursa": {
+            "F": 77700000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 38673000,
+          "bySursa": {
+            "F": 38673000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 16327000,
+          "bySursa": {
+            "F": 16327000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 5973000,
+          "bySursa": {
+            "F": 5973000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "3-davila-cui-4382469",
+      "fileRef": "3_DAVILA CUI 4382469",
+      "name": "Spitalul Clinic de Nefrologie Dr. Carol Davila Bucuresti",
+      "codFiscal": "4382469",
+      "category": "sanatate",
+      "totalBuget": 268098000,
+      "bySursa": {
+        "F": 268098000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 134049000,
+          "bySursa": {
+            "F": 134049000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 67382000
+            },
+            {
+              "ce": "20",
+              "total": 65424000
+            },
+            {
+              "ce": "71",
+              "total": 1428000
+            },
+            {
+              "ce": "59",
+              "total": 460000
+            },
+            {
+              "ce": "60",
+              "total": 33000
+            },
+            {
+              "ce": "85",
+              "total": -678000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 71135000,
+          "bySursa": {
+            "F": 71135000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 54228000,
+          "bySursa": {
+            "F": 54228000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 8495000,
+          "bySursa": {
+            "F": 8495000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "37",
+          "total": 158000,
+          "bySursa": {
+            "F": 158000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 33000,
+          "bySursa": {
+            "F": 33000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "16-panait-s-cui-4316295",
+      "fileRef": "16_PANAIT S CUI 4316295",
+      "name": "Spitalul Clinic de Obstetrica-Ginecologie Prof. Dr. Panait Sirbu Bucuresti",
+      "codFiscal": "4316295",
+      "category": "sanatate",
+      "totalBuget": 229640000,
+      "bySursa": {
+        "F": 229640000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 114820000,
+          "bySursa": {
+            "F": 114820000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 62445000
+            },
+            {
+              "ce": "20",
+              "total": 43454000
+            },
+            {
+              "ce": "60",
+              "total": 5976000
+            },
+            {
+              "ce": "71",
+              "total": 2379000
+            },
+            {
+              "ce": "59",
+              "total": 566000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 49700000,
+          "bySursa": {
+            "F": 49700000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 45651000,
+          "bySursa": {
+            "F": 45651000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 13493000,
+          "bySursa": {
+            "F": 13493000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 5976000,
+          "bySursa": {
+            "F": 5976000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "11-malaxa-cui-4203938",
+      "fileRef": "11_MALAXA CUI 4203938",
+      "name": "Spitalul Clinic Nicolae Malaxa Bucuresti",
+      "codFiscal": "4203938",
+      "category": "sanatate",
+      "totalBuget": 178484000,
+      "bySursa": {
+        "F": 178484000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 89242000,
+          "bySursa": {
+            "F": 89242000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 68700000
+            },
+            {
+              "ce": "20",
+              "total": 18945000
+            },
+            {
+              "ce": "71",
+              "total": 1197000
+            },
+            {
+              "ce": "59",
+              "total": 400000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 44000000,
+          "bySursa": {
+            "F": 44000000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 39710000,
+          "bySursa": {
+            "F": 39710000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 5502000,
+          "bySursa": {
+            "F": 5502000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "37",
+          "total": 30000,
+          "bySursa": {
+            "F": 30000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "14-sf-luca-ci-4340650",
+      "fileRef": "14_SF LUCA CI 4340650",
+      "name": "Spitalul de Boli Cronice Sf. Luca Bucuresti",
+      "codFiscal": "4340650",
+      "category": "sanatate",
+      "totalBuget": 160506000,
+      "bySursa": {
+        "F": 160506000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 80253000,
+          "bySursa": {
+            "F": 80253000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 39672000
+            },
+            {
+              "ce": "20",
+              "total": 35836000
+            },
+            {
+              "ce": "71",
+              "total": 4145000
+            },
+            {
+              "ce": "59",
+              "total": 600000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 28204000,
+          "bySursa": {
+            "F": 28204000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 26349000,
+          "bySursa": {
+            "F": 26349000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 25700000,
+          "bySursa": {
+            "F": 25700000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "9-stoia-cui-4265990",
+      "fileRef": "9_STOIA CUI 4265990",
+      "name": "Centrul Clinic de Boli Reumatismale Dr. Ion Stoia Bucuresti",
+      "codFiscal": "4265990",
+      "category": "sanatate",
+      "totalBuget": 135474000,
+      "bySursa": {
+        "F": 135474000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 67737000,
+          "bySursa": {
+            "F": 67737000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 38846000
+            },
+            {
+              "ce": "10",
+              "total": 19285000
+            },
+            {
+              "ce": "71",
+              "total": 5536000
+            },
+            {
+              "ce": "59",
+              "total": 4070000
+            }
+          ]
+        },
+        {
+          "cf": "40",
+          "total": 37737000,
+          "bySursa": {
+            "F": 37737000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 18200000,
+          "bySursa": {
+            "F": 18200000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 11800000,
+          "bySursa": {
+            "F": 11800000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "17-gorgos-cui-14908162",
+      "fileRef": "17_GORGOS CUI 14908162",
+      "name": "Spitalul de Psihiatrie Titan Dr. Constantin Gorgos Bucuresti",
+      "codFiscal": "14908162",
+      "category": "sanatate",
+      "totalBuget": 109516000,
+      "bySursa": {
+        "F": 109516000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 54758000,
+          "bySursa": {
+            "F": 54758000
+          },
+          "byCE": [
+            {
+              "ce": "20",
+              "total": 29456000
+            },
+            {
+              "ce": "10",
+              "total": 23182000
+            },
+            {
+              "ce": "56",
+              "total": 2055000
+            },
+            {
+              "ce": "71",
+              "total": 230000
+            },
+            {
+              "ce": "59",
+              "total": 90000
+            },
+            {
+              "ce": "85",
+              "total": -255000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 37492000,
+          "bySursa": {
+            "F": 37492000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 9420000,
+          "bySursa": {
+            "F": 9420000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 5791000,
+          "bySursa": {
+            "F": 5791000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "45",
+          "total": 1694000,
+          "bySursa": {
+            "F": 1694000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "42",
+          "total": 361000,
+          "bySursa": {
+            "F": 361000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "8-sf-stefan-cui-4203911",
+      "fileRef": "8_SF STEFAN CUI 4203911",
+      "name": "Spitalul de Pneumoftiziologie Sf. Stefan Bucuresti",
+      "codFiscal": "4203911",
+      "category": "sanatate",
+      "totalBuget": 83268000,
+      "bySursa": {
+        "F": 83268000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 41634000,
+          "bySursa": {
+            "F": 41634000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 30647000
+            },
+            {
+              "ce": "20",
+              "total": 9853000
+            },
+            {
+              "ce": "71",
+              "total": 850000
+            },
+            {
+              "ce": "59",
+              "total": 284000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 23168000,
+          "bySursa": {
+            "F": 23168000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 17330000,
+          "bySursa": {
+            "F": 17330000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 1136000,
+          "bySursa": {
+            "F": 1136000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "18-sf-stelian-cui-4364632",
+      "fileRef": "18_SF STELIAN CUI 4364632",
+      "name": "Centrul de Evaluare si Tratament a Toxicodependentelor pentru Tineri Sfantul Stelian Bucuresti",
+      "codFiscal": "4364632",
+      "category": "sanatate",
+      "totalBuget": 67904000,
+      "bySursa": {
+        "F": 67904000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 33952000,
+          "bySursa": {
+            "F": 33952000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 21900000
+            },
+            {
+              "ce": "20",
+              "total": 11348000
+            },
+            {
+              "ce": "71",
+              "total": 424000
+            },
+            {
+              "ce": "59",
+              "total": 280000
+            }
+          ]
+        },
+        {
+          "cf": "33",
+          "total": 22263000,
+          "bySursa": {
+            "F": 22263000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "43",
+          "total": 8789000,
+          "bySursa": {
+            "F": 8789000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 2900000,
+          "bySursa": {
+            "F": 2900000
+          },
+          "byCE": []
+        }
+      ]
+    },
+    {
+      "id": "2-omf-cui-4267265",
+      "fileRef": "2_OMF CUI 4267265",
+      "name": "Spitalul Clinic de Chirurgie Oro-Maxilo-Faciala Prof. Dr. Dan Theodorescu Bucuresti",
+      "codFiscal": "4267265",
+      "category": "sanatate",
+      "totalBuget": 55048000,
+      "bySursa": {
+        "F": 55048000
+      },
+      "byCF": [
+        {
+          "cf": "66",
+          "total": 27524000,
+          "bySursa": {
+            "F": 27524000
+          },
+          "byCE": [
+            {
+              "ce": "10",
+              "total": 17606000
+            },
+            {
+              "ce": "20",
+              "total": 6386000
+            },
+            {
+              "ce": "71",
+              "total": 3505000
+            },
+            {
+              "ce": "59",
+              "total": 27000
+            }
+          ]
+        },
+        {
+          "cf": "43",
+          "total": 16958000,
+          "bySursa": {
+            "F": 16958000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "33",
+          "total": 10042000,
+          "bySursa": {
+            "F": 10042000
+          },
+          "byCE": []
+        },
+        {
+          "cf": "40",
+          "total": 524000,
+          "bySursa": {
+            "F": 524000
+          },
+          "byCE": []
+        }
+      ]
+    }
+  ]
+}

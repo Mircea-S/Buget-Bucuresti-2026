@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --c-text: #1a1a18;
+  --c-muted: #6e6e6a;
+  --bg-card: #ffffff;
+  --bg-surface: #f7f6f3;
+  --border-color: #e5e4e0;
+}
+
+[data-theme="dark"] {
+  --c-text: #e8e6de;
+  --c-muted: #9c9a92;
+  --bg-card: #1e1e1c;
+  --bg-surface: #282826;
+  --border-color: #3a3a38;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-surface);
+  color: var(--c-text);
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.tab-scroll::-webkit-scrollbar {
+  height: 0;
+}
+
+/* Treemap text adapts to theme */
+[class^="recharts-treemap-depth"] text {
+  fill: var(--c-text) !important;
+}
+
+/* Recharts tooltip override for dark mode */
+.recharts-default-tooltip {
+  background: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+}
+
+/* Glossary term tooltip */
+.glossary-term {
+  position: relative;
+  border-bottom: 1px dotted var(--c-muted);
+  cursor: help;
+}
+
+.glossary-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--c-text);
+  white-space: normal;
+  width: max-content;
+  max-width: 260px;
+  z-index: 50;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  pointer-events: none;
+}
+
+.glossary-term:hover .glossary-tooltip {
+  display: block;
+}
+
+/* Collapsible explainer boxes */
+details.explainer-box > summary {
+  list-style: none;
+  cursor: pointer;
+  user-select: none;
+}
+
+details.explainer-box > summary::-webkit-details-marker {
+  display: none;
+}
+
+details.explainer-box > summary::after {
+  content: "▸";
+  margin-left: 6px;
+  font-size: 10px;
+  transition: transform 0.15s;
+  display: inline-block;
+}
+
+details.explainer-box[open] > summary::after {
+  transform: rotate(90deg);
+}
