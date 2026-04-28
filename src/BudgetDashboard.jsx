@@ -105,69 +105,65 @@ export default function BudgetDashboard() {
 
   const totalBuget = budgetData.meta.totalBugetGeneral || totalCheltuieli;
 
-  const totalInvestitii = useMemo(() => {
-    return institutions.filter(i => i.fileRef !== '2.44.1.1').reduce((s, inst) => {
-      return s + inst.byCF.reduce((s2, cf) => {
-        return s2 + cf.byCE.filter(ce => ce.ce === '71').reduce((s3, ce) => s3 + ce.total, 0);
-      }, 0);
-    }, 0);
-  }, [institutions]);
+  // Helper: sum a CE code across a list of entities
+  const sumCE = (list, ceCode) => list.reduce((s, ent) =>
+    s + ent.byCF.reduce((s2, cf) =>
+      s2 + cf.byCE.filter(ce => ce.ce === ceCode).reduce((s3, ce) => s3 + ce.total, 0), 0), 0);
 
-  const totalPersonal = useMemo(() => {
-    return institutions.filter(i => i.fileRef !== '2.44.1.1').reduce((s, inst) => {
-      return s + inst.byCF.reduce((s2, cf) => {
-        return s2 + cf.byCE.filter(ce => ce.ce === '10').reduce((s3, ce) => s3 + ce.total, 0);
-      }, 0);
-    }, 0);
-  }, [institutions]);
+  const allEntities = useMemo(() =>
+    [...institutions.filter(i => i.fileRef !== '2.44.1.1'), ...hospitals],
+    [institutions, hospitals]);
+
+  const totalInvestitii = useMemo(() => sumCE(allEntities, '71'), [allEntities]);
+  const totalPersonal = useMemo(() => sumCE(allEntities, '10'), [allEntities]);
 
   const totalHospitale = useMemo(() =>
     hospitals.reduce((s, h) => s + h.totalBuget, 0),
     [hospitals]
   );
 
-  // Aggregate by CF across all institutions
+  // Aggregate by CF across all institutions + hospitals
   const aggregatedCF = useMemo(() => {
     const cfMap = {};
-    for (const inst of institutions.filter(i => i.fileRef !== '2.44.1.1')) {
-      for (const cf of inst.byCF) {
+    for (const ent of allEntities) {
+      for (const cf of ent.byCF) {
         if (!cfMap[cf.cf]) cfMap[cf.cf] = { cf: cf.cf, total: 0, institutions: [] };
         cfMap[cf.cf].total += cf.total;
-        cfMap[cf.cf].institutions.push({ name: inst.name, total: cf.total });
+        cfMap[cf.cf].institutions.push({ name: ent.name, total: cf.total });
       }
     }
     return Object.values(cfMap).sort((a, b) => b.total - a.total);
-  }, [institutions]);
+  }, [allEntities]);
 
-  // Aggregate by CE across all institutions
+  // Aggregate by CE across all institutions + hospitals
   const aggregatedCE = useMemo(() => {
     const ceMap = {};
-    for (const inst of institutions.filter(i => i.fileRef !== '2.44.1.1')) {
-      for (const cf of inst.byCF) {
+    for (const ent of allEntities) {
+      for (const cf of ent.byCF) {
         for (const ce of cf.byCE) {
           if (!ceMap[ce.ce]) ceMap[ce.ce] = { ce: ce.ce, total: 0, institutions: [] };
           ceMap[ce.ce].total += ce.total;
-          const existing = ceMap[ce.ce].institutions.find(x => x.name === inst.name);
+          const existing = ceMap[ce.ce].institutions.find(x => x.name === ent.name);
           if (existing) existing.total += ce.total;
-          else ceMap[ce.ce].institutions.push({ name: inst.name, total: ce.total });
+          else ceMap[ce.ce].institutions.push({ name: ent.name, total: ce.total });
         }
       }
     }
     return Object.values(ceMap).sort((a, b) => b.total - a.total);
-  }, [institutions]);
+  }, [allEntities]);
 
-  // Aggregate by sursa
+  // Aggregate by sursa across all institutions + hospitals
   const aggregatedSursa = useMemo(() => {
     const sMap = {};
-    for (const inst of institutions.filter(i => i.fileRef !== '2.44.1.1')) {
-      for (const [sursa, amount] of Object.entries(inst.bySursa)) {
+    for (const ent of allEntities) {
+      for (const [sursa, amount] of Object.entries(ent.bySursa)) {
         sMap[sursa] = (sMap[sursa] || 0) + amount;
       }
     }
     return Object.entries(sMap)
       .map(([sursa, total]) => ({ sursa, total, label: SURSA_LABELS[sursa] || sursa }))
       .sort((a, b) => b.total - a.total);
-  }, [institutions]);
+  }, [allEntities]);
 
   const hospSorted = useMemo(() =>
     [...hospitals].sort((a, b) => hospSort === 'desc' ? b.totalBuget - a.totalBuget : a.totalBuget - b.totalBuget),
@@ -231,7 +227,7 @@ export default function BudgetDashboard() {
         {activeTab === 'spitale' && (
           <SpitaleTab hospitals={hospSorted} total={totalHospitale} sort={hospSort} setSort={setHospSort} />
         )}
-        {activeTab === 'surse' && <SurseTab data={aggregatedSursa} total={totalBuget} institutions={institutions.filter(i => i.fileRef !== '2.44.1.1')} />}
+        {activeTab === 'surse' && <SurseTab data={aggregatedSursa} total={totalBuget} institutions={allEntities} />}
 
         {/* Footer */}
         <footer style={{ marginTop: 40, paddingTop: 16, borderTop: '1px solid var(--border-color)', fontSize: 11, color: 'var(--c-muted)', textAlign: 'center' }}>
